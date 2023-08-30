@@ -16,7 +16,7 @@ jobs:
       - name: Create and Push Sample File
         run: |
           # Create the sample file
-          "Hi Test" -Path sample.txt -ItemType File -Force
+          New-Item -Path sample.txt -ItemType File -Force
           
           # Configure Git
           git config --global user.email "rajeshjanapati@gmail.com"
