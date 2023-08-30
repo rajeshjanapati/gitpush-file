@@ -8,19 +8,19 @@ on:
 jobs:
   push-sample:
     runs-on: ubuntu-latest
-    GITHUB_TOKEN Permissions
-    Actions: read
-    Checks: read
-    Contents: read
-    Deployments: read
-    Discussions: read
-    Issues: read
-    Metadata: read
-    Packages: read
-    PullRequests: read
-    RepositoryProjects: read
-    SecurityEvents: read
-    Statuses: read
+    Permissions:
+      Actions: read
+      Checks: read
+      Contents: read
+      Deployments: read
+      Discussions: read
+      Issues: read
+      Metadata: read
+      Packages: read
+      PullRequests: read
+      RepositoryProjects: read
+      SecurityEvents: read
+      Statuses: read
 
     steps:
       - name: Checkout code
