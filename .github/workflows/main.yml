@@ -23,7 +23,7 @@ jobs:
           git config --global user.name "rajeshjanapati"
 
           git init
-          git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
+          # git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
           git remote add origin https://github.com/rajeshjanapati/gitpush-file.git
           # Stage and commit the sample file
           git add .
