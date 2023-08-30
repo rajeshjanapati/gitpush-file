@@ -16,7 +16,7 @@ jobs:
           $fileContent | Out-File -FilePath sample.txt -Encoding UTF8
 
           # Add and commit the sample file
-          git add .
+          git add sample.txt
           git commit -m "Add sample file"
 
           # Configure Git user information (replace with your info)
