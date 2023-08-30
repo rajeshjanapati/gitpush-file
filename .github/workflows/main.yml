@@ -22,8 +22,6 @@ jobs:
           git config --global user.email "rajeshjanapati@gmail.com"
           git config --global user.name "rajeshjanapati"
 
-          git remote add origin https://github.com/rajeshjanapati/gitpush-file.git
-
           git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
 
           
