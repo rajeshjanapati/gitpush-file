@@ -1,7 +1,8 @@
 name: Upload Sample File
-
-on: push
-
+on:
+  push:
+    branches:
+      - main
 jobs:
   upload-sample:
     runs-on: ubuntu-latest
