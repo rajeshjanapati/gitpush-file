@@ -22,6 +22,7 @@ jobs:
           # Configure Git user information (replace with your info)
           git config user.email "rajeshjanapati@gmail.com"
           git config user.name "rajeshjanapati"
+          git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
 
           # Push the changes to the repository
           git push -f origin main
