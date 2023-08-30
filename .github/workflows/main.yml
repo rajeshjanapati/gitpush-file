@@ -44,4 +44,4 @@ jobs:
           git commit -m "Add sample file"
           
           # Push to the repository
-          git push -f origin main
+          git push
