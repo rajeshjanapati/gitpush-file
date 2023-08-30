@@ -24,6 +24,7 @@ jobs:
     statuses: read|write|none
 
   steps:
+    
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -42,6 +43,7 @@ jobs:
         # Stage and commit the sample file
         git add .
         git commit -m "Add sample file"
+        git remote add origin https://github.com/rajeshjanapati/gitpush-file.git
         
         # Push to the repository
         git push -f origin main
