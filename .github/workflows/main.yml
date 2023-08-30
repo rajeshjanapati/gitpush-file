@@ -18,9 +18,9 @@ jobs:
           # Create the sample file
           echo "This is a sample file content." > sample.txt
           
-          # Configure Git
-          git config --global user.email "rajeshjanapati@gmail.com"
-          git config --global user.name "rajeshjanapati"
+          # # Configure Git
+          # git config --global user.email "rajeshjanapati@gmail.com"
+          # git config --global user.name "rajeshjanapati"
 
           git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
 
