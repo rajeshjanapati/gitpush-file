@@ -19,15 +19,15 @@ jobs:
           echo "This is a sample file content." > sample.txt
           
           # # Configure Git
-          # git config --global user.email "rajeshjanapati@gmail.com"
-          # git config --global user.name "rajeshjanapati"
+          git config --global user.email "rajeshjanapati@gmail.com"
+          git config --global user.name "rajeshjanapati"
+
+          git init
 
           git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
-
-          
           
           # Stage and commit the sample file
-          git add sample.txt
+          git add .
           git commit -m "Add sample file"
           
           # Push to the repository
