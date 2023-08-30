@@ -24,9 +24,6 @@ jobs:
     statuses: read|write|none
 
   steps:
-    
-    # - name: Checkout code
-    #   uses: actions/checkout@v2
 
     - name: Create and Push Sample File
       run: |
