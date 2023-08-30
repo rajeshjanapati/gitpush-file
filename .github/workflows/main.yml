@@ -1,4 +1,4 @@
-name: Push Sample File
+name: Upload Sample File
 
 on:
   push:
@@ -6,41 +6,25 @@ on:
       - main
 
 jobs:
-  push-sample:
+  upload-sample:
     runs-on: ubuntu-latest
-  permissions:
-    actions: read|write|none
-    checks: read|write|none
-    contents: read|write|none
-    deployments: read|write|none
-    id-token: read|write|none
-    issues: read|write|none
-    discussions: read|write|none
-    packages: read|write|none
-    pages: read|write|none
-    pull-requests: read|write|none
-    repository-projects: read|write|none
-    security-events: read|write|none
-    statuses: read|write|none
 
-  steps:
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Create and Push Sample File
-      run: |
-        # Create the sample file
-        echo "This is a sample file content." > sample.txt
-        
-        # # Configure Git
-        git config --global user.email "rajeshjanapati@gmail.com"
-        git config --global user.name "rajeshjanapati"
+      - name: Upload Sample File
+        run: |
+          $fileContent = "This is the content of the sample file."
+          $fileContent | Out-File -FilePath sample.txt -Encoding UTF8
 
-        git init
-        # git remote set-url origin https://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@github.com/rajeshjanapati/gitpush-file.git
-        # git remote add origin https://github.com/rajeshjanapati/gitpush-file.git
-        # Stage and commit the sample file
-        git add .
-        git commit -m "Add sample file"
-        git remote add origin https://github.com/rajeshjanapati/gitpush-file.git
-        
-        # Push to the repository
-        git push -f origin main
+          # Add and commit the sample file
+          git add sample.txt
+          git commit -m "Add sample file"
+
+          # Configure Git user information (replace with your info)
+          git config user.email "rajeshjanapati@gmail.com"
+          git config user.name "rajeshjanapati"
+
+          # Push the changes to the repository
+          git push -f origin main
