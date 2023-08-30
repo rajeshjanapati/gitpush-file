@@ -1,9 +1,6 @@
 name: Upload Sample File
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   upload-sample:
@@ -15,11 +12,11 @@ jobs:
 
       - name: Upload Sample File
         run: |
-          $fileContent = "This is the content of the sample file."
+          $fileContent = "This is the  of the sample file."
           $fileContent | Out-File -FilePath sample.txt -Encoding UTF8
 
           # Add and commit the sample file
-          git add sample.txt
+          git add .
           git commit -m "Add sample file"
 
           # Configure Git user information (replace with your info)
