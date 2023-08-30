@@ -1,0 +1,30 @@
+name: Push Sample File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-sample:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create and Push Sample File
+        run: |
+          # Create the sample file
+          New-Item -Path sample.txt -ItemType File -Force
+          
+          # Configure Git
+          git config --global user.email "rajeshjanapati@gmail.com"
+          git config --global user.name "rajeshjanapati"
+          
+          # Stage and commit the sample file
+          git add sample.txt
+          git commit -m "Add sample file"
+          
+          # Push to the repository
+          git push -f origin main
